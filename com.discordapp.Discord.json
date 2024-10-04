@@ -33,25 +33,6 @@
     ],
     "modules": [
         {
-            "name": "noto-color-emoji-font",
-            "buildsystem": "simple",
-            "build-commands": [
-                "install -Dm644 NotoColorEmoji.ttf /app/share/fonts"
-            ],
-            "sources": [
-                {
-                    "type": "file",
-                    "url": "https://raw.githubusercontent.com/googlefonts/noto-emoji/refs/tags/v2.047/fonts/NotoColorEmoji.ttf",
-                    "sha256": "39ee3c587e10e89669b9ff32703261d10d5f9c4dd5ad147b6b5a1c5200591817",
-                    "x-checker-data": {
-                        "type": "anitya",
-                        "project-id": 10556,
-                        "url-template": "https://raw.githubusercontent.com/googlefonts/noto-emoji/refs/tags/v$version/fonts/NotoColorEmoji.ttf"
-                    }
-                }
-            ]
-        },
-        {
             "name": "discord",
             "buildsystem": "simple",
             "build-commands": [

@@ -33,24 +33,22 @@
     ],
     "modules": [
         {
-            "name": "twemoji-fonts",
+            "name": "noto-color-emoji-font",
             "buildsystem": "simple",
+            "build-commands": [
+                "install -Dm644 NotoColorEmoji.ttf /app/share/fonts"
+            ],
             "sources": [
                 {
                     "type": "file",
-                    "path": "emoji-font.conf"
-                },
-                {
-                    "type": "file",
-                    "path": "Twemoji.ttf"
+                    "url": "https://raw.githubusercontent.com/googlefonts/noto-emoji/refs/tags/v2.047/fonts/NotoColorEmoji.ttf",
+                    "sha256": "39ee3c587e10e89669b9ff32703261d10d5f9c4dd5ad147b6b5a1c5200591817",
+                    "x-checker-data": {
+                        "type": "anitya",
+                        "project-id": 10556,
+                        "url-template": "https://raw.githubusercontent.com/googlefonts/noto-emoji/refs/tags/v$version/fonts/NotoColorEmoji.ttf"
+                    }
                 }
-            ],
-            "build-commands": [
-                "mkdir -p /app/share/fonts/",
-                "cp Twemoji.ttf /app/share/fonts/",
-                "mkdir -p /app/etc/fonts/",
-                "cp emoji-font.conf /app/etc/fonts/local.conf",
-                "fc-cache -fv"
             ]
         },
         {
